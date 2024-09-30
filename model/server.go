@@ -54,7 +54,7 @@ func (a Server) IsValid() []error {
 	}
 	// check if the mtu is valid
 	if a.Mtu < 0 {
-		errs = append(errs, fmt.Errorf("MTU %d is invalid", a.PersistentKeepalive))
+		errs = append(errs, fmt.Errorf("MTU %d is invalid", a.Mtu))
 	}
 	// check if the address are valid
 	for _, dns := range a.Dns {
